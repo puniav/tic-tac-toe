@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+  }
+
+  button {
+    outline: none;
+    border: 4px solid green;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background: green;
+    color: white;
+  }
+
+  .playboard {
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  .cell {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    border: 3px solid black;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .cell:hover {
+    cursor: pointer;
+    background: #a8cdce;
+  }
+
+#cell_0,
+#cell_1,
+#cell_2 {
+  border-top: none;
+}
+
+#cell_0,
+#cell_3,
+#cell_6 {
+  border-left: none;
+}
+
+#cell_6,
+#cell_7,
+#cell_8 {
+  border-bottom: none;
+}
+
+#cell_2,
+#cell_5,
+#cell_8 {
+  border-right: none;
+}
+
+.top {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.symbol_cross,
+.symbol_circle{
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 50px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+    width: 150px;
+    float:left;
+}
+
+.current-symbol{
+    border: 4px solid rgb(63, 233, 12);
+}
+
+.winner{
+    width: 300px;
+}
